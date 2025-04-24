@@ -42,5 +42,4 @@ Un juego 2D hecho en **Godot Engine** donde controlas a un axolote mexicano que 
 
 ---
 
-## 📂 Estructura del Proyecto
 
