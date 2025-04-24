@@ -43,3 +43,9 @@ Un juego 2D hecho en **Godot Engine** donde controlas a un axolote mexicano que 
 ---
 
 ![](https://github.com/Quetzal345/Charro-game/blob/3bd61d266d0d3c57083b70f4b9c6f54697e2a947/Juego1.png)
+
+
+# Para jugar Charro Aventuras
+Necesitan descargar la carpeta .zip de charrogame, ahi se encuentra el APK del juego, esta en una carpeta zip porque el archivo es muy pesado.
+
+![Juego]()
