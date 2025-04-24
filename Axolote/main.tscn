@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dawgyop67klju"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_xoy8o"]
+[ext_resource type="PackedScene" uid="uid://d2pjjphw0esd6" path="res://Jugador.tscn" id="2_kyov2"]
+[ext_resource type="Texture2D" uid="uid://doejv0qv3fs7v" path="res://Arte/Catedral.jpg" id="2_xh3oq"]
+[ext_resource type="PackedScene" uid="uid://cvmmacfq2uvp7" path="res://tamal.tscn" id="3_0qnq8"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_xoy8o")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(557, -129)
+scale = Vector2(2.93929, 3.60893)
+texture = ExtResource("2_xh3oq")
+
+[node name="Jugador" parent="." instance=ExtResource("2_kyov2")]
+position = Vector2(168, 333)
+
+[node name="Camera2D" type="Camera2D" parent="Jugador"]
+
+[node name="Tamal1" parent="." instance=ExtResource("3_0qnq8")]
+position = Vector2(400, 174)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ContadorLabel" type="Label" parent="CanvasLayer"]
+offset_left = 405.0
+offset_right = 605.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 45
+text = "Tortas: 0"
+
+[connection signal="recolectado" from="Tamal1" to="." method="_on_tamal_1_recolectado"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2pjjphw0esd6"]
+
+[ext_resource type="Script" path="res://jugador.gd" id="1_h17sp"]
+[ext_resource type="Texture2D" uid="uid://dxdgl11wlkw7n" path="res://Arte/personage.png" id="2_enas1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6gi6"]
+size = Vector2(55, 98.5)
+
+[node name="Jugador" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_h17sp")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, 22)
+shape = SubResource("RectangleShape2D_v6gi6")
+
+[node name="Personaje" type="Sprite2D" parent="."]
+position = Vector2(10.5625, 21.0624)
+scale = Vector2(0.13471, 0.121317)
+texture = ExtResource("2_enas1")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="frame_changed" from="Personaje" to="." method="_on_personaje_frame_changed"]
